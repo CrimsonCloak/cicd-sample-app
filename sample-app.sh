@@ -22,4 +22,5 @@ _EOF_
 cd tempdir || exit
 docker build -t sampleapp .
 docker run -t -d -p 5050:5050 --name samplerunning sampleapp
+rm -rf tempdir
 docker ps -a 
