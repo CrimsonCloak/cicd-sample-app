@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
+# Remove docker container 
+docker stop samplerunning || true
+docker rm samplerunning || true
+
+
+
 if [ -d tempdir ]; then
 rm -rf tempdir
 fi
